@@ -72,6 +72,13 @@ const config: HardhatUserConfig = {
     kovan: createTestnetConfig("kovan"),
     rinkeby: createTestnetConfig("rinkeby"),
     ropsten: createTestnetConfig("ropsten"),
+    mumbai: {
+      accounts: {
+        mnemonic,
+      }, 
+      chainId: 80001,
+      url: "https://rpc-mumbai.maticvigil.com/v1/839c4f1f04664475d4214b7eb9c0b487746fa5eb"
+    }
   },
   paths: {
     artifacts: "./artifacts",

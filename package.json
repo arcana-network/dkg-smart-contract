@@ -6,7 +6,9 @@
     "name": "Saurav Kancha",
     "url": "https://saurav.tech"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
