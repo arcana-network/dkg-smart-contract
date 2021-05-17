@@ -2,6 +2,7 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+import "@openzeppelin/hardhat-upgrades";
 
 import "./tasks/accounts";
 import "./tasks/clean";
@@ -75,10 +76,10 @@ const config: HardhatUserConfig = {
     mumbai: {
       accounts: {
         mnemonic,
-      }, 
+      },
       chainId: 80001,
-      url: "https://rpc-mumbai.maticvigil.com/v1/839c4f1f04664475d4214b7eb9c0b487746fa5eb"
-    }
+      url: "https://rpc-mumbai.maticvigil.com/v1/839c4f1f04664475d4214b7eb9c0b487746fa5eb",
+    },
   },
   paths: {
     artifacts: "./artifacts",

@@ -1,7 +1,6 @@
 import { ethers } from "hardhat";
-import { NodeList__factory, NodeList } from "../typechain"
+import { NodeList__factory, NodeList } from "../typechain";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address";
-
 
 async function main(): Promise<void> {
   const sigers: SignerWithAddress[] = await ethers.getSigners();

@@ -1,7 +1,6 @@
-# DKG Smart Contract 
+# DKG Smart Contract
 
 Set of smart contract for DKG protocol.
-
 
 ## Usage
 
