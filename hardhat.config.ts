@@ -3,6 +3,7 @@ import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "@openzeppelin/hardhat-upgrades";
+import "@nomiclabs/hardhat-etherscan";
 
 import "./tasks/accounts";
 import "./tasks/clean";
@@ -10,8 +11,8 @@ import "./tasks/clean";
 import { resolve } from "path";
 
 import { config as dotenvConfig } from "dotenv";
-import { HardhatUserConfig } from "hardhat/config";
 import { NetworkUserConfig } from "hardhat/types";
+import { HardhatConfig } from "./types";
 
 dotenvConfig({ path: resolve(__dirname, "./.env") });
 
@@ -54,7 +55,7 @@ function createTestnetConfig(network: keyof typeof chainIds): NetworkUserConfig 
   };
 }
 
-const config: HardhatUserConfig = {
+const config: HardhatConfig = {
   defaultNetwork: "hardhat",
   gasReporter: {
     currency: "USD",
@@ -88,7 +89,7 @@ const config: HardhatUserConfig = {
     tests: "./test",
   },
   solidity: {
-    version: "0.8.4",
+    version: "0.8.2",
     settings: {
       metadata: {
         // Not including the metadata hash
@@ -106,6 +107,9 @@ const config: HardhatUserConfig = {
   typechain: {
     outDir: "typechain",
     target: "ethers-v5",
+  },
+  etherscan: {
+    apiKey: "PIG155ZD21F51VZA46TMI48RNYCF8Y6FUP",
   },
 };
 

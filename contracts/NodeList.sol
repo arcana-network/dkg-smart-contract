@@ -50,6 +50,10 @@ contract NodeList is OwnableUpgradeable {
         _;
     }
 
+    function initialize() public initializer {
+        OwnableUpgradeable.__Ownable_init();
+    }
+
     function listNode(
         uint256 epoch,
         string calldata declaredIp,

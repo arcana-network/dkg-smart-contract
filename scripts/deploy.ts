@@ -1,16 +1,25 @@
-import { ethers } from "hardhat";
+import { ethers, network, upgrades } from "hardhat";
 import { NodeList__factory, NodeList } from "../typechain";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address";
+import { hashBytecodeWithoutMetadata, Manifest } from "@openzeppelin/upgrades-core";
 
 async function main(): Promise<void> {
   const sigers: SignerWithAddress[] = await ethers.getSigners();
   console.log("Deployer:", sigers[0].address);
   console.log("Balance:", ethers.utils.formatEther(await sigers[0].getBalance()));
   const NodeList: NodeList__factory = (await ethers.getContractFactory("NodeList")) as NodeList__factory;
-  const node_list: NodeList = await NodeList.deploy();
-  await node_list.deployed();
+  const nodelistProxy = await upgrades.deployProxy(NodeList);
+  await nodelistProxy.deployed();
 
-  console.log("Node List deployed to: ", node_list.address);
+  console.log("Node List deployed to: ", nodelistProxy.address);
+
+  // Peer into OpenZeppelin manifest to extract the implementation address
+  const ozUpgradesManifestClient = await Manifest.forNetwork(network.provider);
+  const manifest = await ozUpgradesManifestClient.read();
+  const bytecodeHash = hashBytecodeWithoutMetadata(NodeList.bytecode);
+  const implementationContract = manifest.impls[bytecodeHash];
+
+  console.log("Implemetation address:", implementationContract?.address)
 }
 
 main()
