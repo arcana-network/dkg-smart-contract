@@ -7,7 +7,7 @@
       "hash": "0x67f8712a5612b06944369b311430c98d450e72d71d6c177544d0d2b7b4001335",
       "type": 0,
       "accessList": null,
-      "blockHash": "0xadba6c60378e7ffa05e76b93b9541fc5e06f9750ac6d58352d263588582a6eea",
+      "blockHash": "0xaa0f2cc37ed8c4690aec650baca752dc4bd23f28ee009f92156377a18aff9435",
       "blockNumber": 2,
       "transactionIndex": 0,
       "confirmations": 1,
@@ -49,12 +49,17 @@
       "address": "0x047f3c31eb467FA2662d57F8Fc35fB5098bAF7eb",
       "txHash": "0x1a73296ea24509afe4d403f95b5227ba91d374656b0b1ff505d80463ce8de4be",
       "kind": "transparent"
+    },
+    {
+      "address": "0x37C79CEC040D8bAE97447121f4d4F67adE237dD3",
+      "txHash": "0xc57a645a31f55d74f6bd1586c5ae6b02c12b8b51f4a5ae8741be8a79d5c7c7b6",
+      "kind": "transparent"
     }
   ],
   "impls": {
-    "ab756236b5ba20b087bf3389e96f54ed3534634cb20ac692bfdd4c0f82bf4a0e": {
+    "a2e374380d6e2c636de1e007bda8b817562f5032efd1f308bb138266086ddfcf": {
       "address": "0xAC7af756dA12A120BbD213e84F812Bd418CCAa6a",
-      "txHash": "0x9ac47ec5fd5cd6e7b06b8e516cf7d87404723e7516eb1a598274397b42d0b57e",
+      "txHash": "0xd750a52d797b8d5651dfd2039d72d0a1f61176db79f18c6f26ac5e2e1ac4ed93",
       "layout": {
         "storage": [
           {
@@ -97,25 +102,25 @@
             "contract": "NodeList",
             "label": "whitelist",
             "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
-            "src": "contracts/NodeList.sol:30"
+            "src": "contracts/NodeList.sol:31"
           },
           {
             "contract": "NodeList",
             "label": "epochInfo",
             "type": "t_mapping(t_uint256,t_struct(Epoch)257_storage)",
-            "src": "contracts/NodeList.sol:32"
+            "src": "contracts/NodeList.sol:33"
           },
           {
             "contract": "NodeList",
             "label": "nodeDetails",
             "type": "t_mapping(t_address,t_struct(Details)241_storage)",
-            "src": "contracts/NodeList.sol:34"
+            "src": "contracts/NodeList.sol:35"
           },
           {
             "contract": "NodeList",
             "label": "pssStatus",
             "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))",
-            "src": "contracts/NodeList.sol:36"
+            "src": "contracts/NodeList.sol:37"
           }
         ],
         "types": {

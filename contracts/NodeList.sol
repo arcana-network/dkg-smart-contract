@@ -26,6 +26,7 @@ contract NodeList is OwnableUpgradeable {
     }
 
     event NodeListed(address publicKey, uint256 epoch, uint256 position);
+    event EpochChanged(uint256 oldEpoch, uint256 newEpoch);
 
     mapping(uint256 => mapping(address => bool)) public whitelist;
 
@@ -52,6 +53,12 @@ contract NodeList is OwnableUpgradeable {
 
     function initialize() public initializer {
         OwnableUpgradeable.__Ownable_init();
+    }
+
+    function setCurrentEpoch(uint256 _newEpoch) external onlyOwner {
+        uint256 oldEpoch = currentEpoch;
+        currentEpoch = _newEpoch;
+        emit EpochChanged(oldEpoch, _newEpoch);
     }
 
     function listNode(

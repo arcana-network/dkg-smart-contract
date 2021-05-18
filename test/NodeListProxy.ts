@@ -43,13 +43,24 @@ describe("NodeList (Proxy)", () => {
       expect(epochData.nextEpoch).to.equal(nextEpoch);
     });
 
-    it("Should update whitelist", async()=>{
-        let epoch = 1;
-        whitelist.forEach(async(acc)=>{
-            const tx = await nodelistProxy.updateWhitelist(epoch, acc, true);
-            await tx.wait();
-            expect(await nodelistProxy.isWhitelisted(epoch, acc)).to.be.true;
-        })
-    })
+    it("Should update whitelist", async () => {
+      let epoch = 1;
+      whitelist.forEach(async acc => {
+        const tx = await nodelistProxy.updateWhitelist(epoch, acc, true);
+        await tx.wait();
+        expect(await nodelistProxy.isWhitelisted(epoch, acc)).to.be.true;
+      });
+    });
+  });
+
+  describe("Set current epoch", () => {
+    it("Should change current epoch", async () => {
+      const epoch = ethers.BigNumber.from(2);
+
+      const tx = await await nodelistProxy.setCurrentEpoch(epoch);
+      await tx.wait();
+
+      expect(await nodelistProxy.currentEpoch()).to.equal(epoch);
+    });
   });
 });
