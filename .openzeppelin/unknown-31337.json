@@ -7,7 +7,7 @@
       "hash": "0x67f8712a5612b06944369b311430c98d450e72d71d6c177544d0d2b7b4001335",
       "type": 0,
       "accessList": null,
-      "blockHash": "0xace84f3093be1edea969175fa94123727747b44415f2e3e8064d05b6459a64e3",
+      "blockHash": "0xadba6c60378e7ffa05e76b93b9541fc5e06f9750ac6d58352d263588582a6eea",
       "blockNumber": 2,
       "transactionIndex": 0,
       "confirmations": 1,
@@ -36,13 +36,18 @@
   },
   "proxies": [
     {
-      "address": "0x25C45feb80C592f961249a6F92605C3cb0d9F674",
-      "txHash": "0x0500009667c5e033f2b268226867516e1ce685ece8a23031056fb6e5bc695cf4",
+      "address": "0xE41390d07BE5032F1EF9b27C316217987525f843",
+      "txHash": "0x75eda653a39496ff28d2574f0a986dc8e40b14c99311312394d701cdea0f243d",
       "kind": "transparent"
     },
     {
-      "address": "0xE41390d07BE5032F1EF9b27C316217987525f843",
-      "txHash": "0x75eda653a39496ff28d2574f0a986dc8e40b14c99311312394d701cdea0f243d",
+      "address": "0x25C45feb80C592f961249a6F92605C3cb0d9F674",
+      "txHash": "0x99112580b9dbee3f8fe0c5d2f88b83754aeadbe08906af372570f5efc69b5e98",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x047f3c31eb467FA2662d57F8Fc35fB5098bAF7eb",
+      "txHash": "0x1a73296ea24509afe4d403f95b5227ba91d374656b0b1ff505d80463ce8de4be",
       "kind": "transparent"
     }
   ],

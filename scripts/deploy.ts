@@ -19,7 +19,7 @@ async function main(): Promise<void> {
   const bytecodeHash = hashBytecodeWithoutMetadata(NodeList.bytecode);
   const implementationContract = manifest.impls[bytecodeHash];
 
-  console.log("Implemetation address:", implementationContract?.address)
+  console.log("Implemetation address:", implementationContract?.address);
 }
 
 main()
