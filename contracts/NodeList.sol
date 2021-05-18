@@ -51,8 +51,9 @@ contract NodeList is OwnableUpgradeable {
         _;
     }
 
-    function initialize() public initializer {
+    function initialize(uint256 _epoch) public initializer {
         OwnableUpgradeable.__Ownable_init();
+        currentEpoch = _epoch;
     }
 
     function setCurrentEpoch(uint256 _newEpoch) external onlyOwner {

@@ -7,8 +7,11 @@ async function main(): Promise<void> {
   const sigers: SignerWithAddress[] = await ethers.getSigners();
   console.log("Deployer:", sigers[0].address);
   console.log("Balance:", ethers.utils.formatEther(await sigers[0].getBalance()));
+
+  const epoch = ethers.BigNumber.from(1);
+
   const NodeList: NodeList__factory = (await ethers.getContractFactory("NodeList")) as NodeList__factory;
-  const nodelistProxy = await upgrades.deployProxy(NodeList);
+  const nodelistProxy = await upgrades.deployProxy(NodeList, [epoch]);
   await nodelistProxy.deployed();
 
   console.log("Node List deployed to: ", nodelistProxy.address);

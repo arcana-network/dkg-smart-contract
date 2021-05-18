@@ -5,17 +5,22 @@ import { NodeList__factory } from "../typechain";
 
 describe("NodeList (Proxy)", () => {
   let nodelistProxy: any, accounts: SignerWithAddress[], whitelist: string[];
+  let currentEpoch = ethers.BigNumber.from(1);
 
   beforeEach("Deploy Contracts", async () => {
     const NodeListFactory: NodeList__factory = (await ethers.getContractFactory("NodeList")) as NodeList__factory;
-    nodelistProxy = await upgrades.deployProxy(NodeListFactory);
+    nodelistProxy = await upgrades.deployProxy(NodeListFactory, [currentEpoch]);
     await nodelistProxy.deployed();
     accounts = await ethers.getSigners();
   });
 
   describe("After Deploy", () => {
-    it("should have valid address", async () => {
+    it("Should have valid address", async () => {
       expect(nodelistProxy.address).to.not.equal(ethers.constants.AddressZero);
+    });
+
+    it("Should match currrent epoch", async () => {
+      expect(await nodelistProxy.currentEpoch()).equal(currentEpoch);
     });
   });
 
@@ -56,10 +61,8 @@ describe("NodeList (Proxy)", () => {
   describe("Set current epoch", () => {
     it("Should change current epoch", async () => {
       const epoch = ethers.BigNumber.from(2);
-
       const tx = await await nodelistProxy.setCurrentEpoch(epoch);
       await tx.wait();
-
       expect(await nodelistProxy.currentEpoch()).to.equal(epoch);
     });
   });
