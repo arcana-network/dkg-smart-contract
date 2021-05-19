@@ -4,13 +4,21 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-wit
 import { hashBytecodeWithoutMetadata, Manifest } from "@openzeppelin/upgrades-core";
 
 async function main(): Promise<void> {
-  const sigers: SignerWithAddress[] = await ethers.getSigners();
-  console.log("Deployer:", sigers[0].address);
-  console.log("Balance:", ethers.utils.formatEther(await sigers[0].getBalance()));
-
-  const epoch = ethers.BigNumber.from(1);
+  const signers: SignerWithAddress[] = await ethers.getSigners();
+  const whiteList: string[] = [
+    "0x0Ce58A86E00999d46C5F2E8D65137e1F8dAfEf16",
+    "0x69AA96328064a4819cd8AD262cb9d56c3b21D12B",
+    "0x29b18b7fEDF56D1F8E251Bb44A6E6df79456ba41",
+    "0x8b1a8E67174d2D28e211eA4fA6b3ecc77B0B1aAB",
+    "0x9993083792F60a50a8808AC4Fe8A63779DdADe23",
+    "0x25060622EC9275e9171F65Eb134753f45416a60f",
+  ];
+  console.log("Deployer:", signers[0].address);
+  console.log("Balance:", ethers.utils.formatEther(await signers[0].getBalance()));
+  console.log("Total signers", signers.length);
 
   const NodeList: NodeList__factory = (await ethers.getContractFactory("NodeList")) as NodeList__factory;
+  let epoch = 1;
   const nodelistProxy = await upgrades.deployProxy(NodeList, [epoch]);
   await nodelistProxy.deployed();
 
@@ -23,6 +31,14 @@ async function main(): Promise<void> {
   const implementationContract = manifest.impls[bytecodeHash];
 
   console.log("Implemetation address:", implementationContract?.address);
+
+  await Promise.all(
+    whiteList.map(async (acc: any) => {
+      const tx = await nodelistProxy.updateWhitelist(epoch, acc, true);
+      await tx.wait();
+      console.log(`${acc}: `, tx.hash);
+    }),
+  );
 }
 
 main()

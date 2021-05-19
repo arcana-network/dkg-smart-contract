@@ -51,6 +51,7 @@ contract NodeList is OwnableUpgradeable {
         _;
     }
 
+    // @dev Act like a constructor for upgradable contract.
     function initialize(uint256 _epoch) public initializer {
         OwnableUpgradeable.__Ownable_init();
         currentEpoch = _epoch;
@@ -165,5 +166,11 @@ contract NodeList is OwnableUpgradeable {
             }
         }
         return false;
+    }
+
+    function clearAllEpoch() public {
+        for (uint256 i=0 ; i<=currentEpoch;i++){
+            delete epochInfo[i];
+        }
     }
 }
