@@ -88,6 +88,20 @@ const config: HardhatConfig = {
       url: "https://rpc-mumbai.maticvigil.com/v1/839c4f1f04664475d4214b7eb9c0b487746fa5eb",
       gasPrice: 50000000000,
     },
+    arcana: {
+      accounts: [
+        "0x88baea1c45c1434e494604f48a39eedb780ba71086d109b78cc3b7d41aa49773",
+        "0x6dbf99b051530d6de5580498d21b12400d9948db2077218fbe1a4eb8e0344a6f",
+        "0xeddd2422c75dd49d02e4cde7fed0a906ca296707c06829c3cbbdb28829bf39e1",
+        "0x3aa05e8a75e03a09b504314686599e8a68cd05a1c0e59f53cf7a112029d423ea",
+        "0xf524cf351ba57c3967219a6514bcdd5b79523b08d88eb71fa58b1940bb9f30e0",
+        "0xf30105f5658983d74d018d56f00d288671c9835ae62700d0e6c220f8c3ab0fb5",
+        "0x8c4513e9f0dee96823b4f720f89df2b2c42b925d992bea266c4aae2b3d53e954",
+      ],
+      chainId: 100,
+      url: "http://35.154.54.71:10002/",
+      gasPrice: 50000000000,
+    },
   },
   paths: {
     artifacts: "./artifacts",

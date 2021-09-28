@@ -6,7 +6,7 @@ import { NodeList__factory } from "../typechain";
 describe("NodeList (Proxy)", () => {
   let nodelistProxy: any, accounts: SignerWithAddress[], whitelist: string[];
   let currentEpoch = ethers.BigNumber.from(1);
-  let n = ethers.BigNumber.from(5)
+  let n = ethers.BigNumber.from(5);
 
   before("Deploy Contracts", async () => {
     const NodeListFactory: NodeList__factory = (await ethers.getContractFactory("NodeList")) as NodeList__factory;
@@ -67,12 +67,12 @@ describe("NodeList (Proxy)", () => {
     });
   });
 
-  describe("Delete all epochs", ()=>{
-    it("Should remoave all epoch data", async()=>{
+  describe("Delete all epochs", () => {
+    it("Should remoave all epoch data", async () => {
       expect((await nodelistProxy.getEpochInfo(1)).n).equal(n);
       const tx = await nodelistProxy.clearAllEpoch();
       await tx.wait();
       expect((await nodelistProxy.getEpochInfo(1)).n).equal(ethers.constants.Zero);
-    })
-  })
+    });
+  });
 });

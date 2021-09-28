@@ -1,0 +1,177 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [],
+  "impls": {
+    "9a817c3339779e26223ae0adc3d34c92063913f95d08cbdb4c0bb0539dc17957": {
+      "address": "0x1AE13FBCF3FF934720c0f4B796DAa6c2AC12daFe",
+      "txHash": "0x04a77722d2609a92fbd982a5ea7b8a1f7e1cd8ecb96509ce064c8f0252518f40",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:23"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:28"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "contract": "NodeList",
+            "label": "currentEpoch",
+            "type": "t_uint256",
+            "src": "contracts/NodeList.sol:7"
+          },
+          {
+            "contract": "NodeList",
+            "label": "whitelist",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "src": "contracts/NodeList.sol:31"
+          },
+          {
+            "contract": "NodeList",
+            "label": "epochInfo",
+            "type": "t_mapping(t_uint256,t_struct(Epoch)257_storage)",
+            "src": "contracts/NodeList.sol:33"
+          },
+          {
+            "contract": "NodeList",
+            "label": "nodeDetails",
+            "type": "t_mapping(t_address,t_struct(Details)241_storage)",
+            "src": "contracts/NodeList.sol:35"
+          },
+          {
+            "contract": "NodeList",
+            "label": "pssStatus",
+            "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))",
+            "src": "contracts/NodeList.sol:37"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_uint256,t_struct(Epoch)257_storage)": {
+            "label": "mapping(uint256 => struct NodeList.Epoch)"
+          },
+          "t_struct(Epoch)257_storage": {
+            "label": "struct NodeList.Epoch",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "n",
+                "type": "t_uint256"
+              },
+              {
+                "label": "k",
+                "type": "t_uint256"
+              },
+              {
+                "label": "t",
+                "type": "t_uint256"
+              },
+              {
+                "label": "nodeList",
+                "type": "t_array(t_address)dyn_storage"
+              },
+              {
+                "label": "prevEpoch",
+                "type": "t_uint256"
+              },
+              {
+                "label": "nextEpoch",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_mapping(t_address,t_struct(Details)241_storage)": {
+            "label": "mapping(address => struct NodeList.Details)"
+          },
+          "t_struct(Details)241_storage": {
+            "label": "struct NodeList.Details",
+            "members": [
+              {
+                "label": "declaredIp",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "position",
+                "type": "t_uint256"
+              },
+              {
+                "label": "pubKx",
+                "type": "t_uint256"
+              },
+              {
+                "label": "pubKy",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tmP2PListenAddress",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "p2pListenAddress",
+                "type": "t_string_storage"
+              }
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(uint256 => mapping(uint256 => uint256))"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    }
+  }
+}

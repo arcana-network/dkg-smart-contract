@@ -64,12 +64,188 @@
       "address": "0x66a9f7Bd25474C3b3c07deA3D381B4793e966989",
       "txHash": "0xe7561e1ab8a0b3f42d1c0e8be138e5ab53d2c32afd860a7643d581e79854b950",
       "kind": "transparent"
+    },
+    {
+      "address": "0x711861B1cE4E563EFF46f3F06D524D8C9882AD07",
+      "txHash": "0x3ee657c1f327d8f405cc801d570eb9624635ba1502aa19e019013ddfada85e9a",
+      "kind": "transparent"
     }
   ],
   "impls": {
     "e28a65538fd3e215362866038721dfc3e3af3f22ae0de45b49e4e84394ecbe41": {
       "address": "0x1980C1692a9B15f626A796febee7f6813e23D44D",
       "txHash": "0x364a2b8086f432e975ff9127f0ea06c42c3b328b0ccf63360dca527c5335023b",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:23"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:28"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "contract": "NodeList",
+            "label": "currentEpoch",
+            "type": "t_uint256",
+            "src": "contracts/NodeList.sol:7"
+          },
+          {
+            "contract": "NodeList",
+            "label": "whitelist",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "src": "contracts/NodeList.sol:31"
+          },
+          {
+            "contract": "NodeList",
+            "label": "epochInfo",
+            "type": "t_mapping(t_uint256,t_struct(Epoch)257_storage)",
+            "src": "contracts/NodeList.sol:33"
+          },
+          {
+            "contract": "NodeList",
+            "label": "nodeDetails",
+            "type": "t_mapping(t_address,t_struct(Details)241_storage)",
+            "src": "contracts/NodeList.sol:35"
+          },
+          {
+            "contract": "NodeList",
+            "label": "pssStatus",
+            "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))",
+            "src": "contracts/NodeList.sol:37"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_uint256,t_struct(Epoch)257_storage)": {
+            "label": "mapping(uint256 => struct NodeList.Epoch)"
+          },
+          "t_struct(Epoch)257_storage": {
+            "label": "struct NodeList.Epoch",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "n",
+                "type": "t_uint256"
+              },
+              {
+                "label": "k",
+                "type": "t_uint256"
+              },
+              {
+                "label": "t",
+                "type": "t_uint256"
+              },
+              {
+                "label": "nodeList",
+                "type": "t_array(t_address)dyn_storage"
+              },
+              {
+                "label": "prevEpoch",
+                "type": "t_uint256"
+              },
+              {
+                "label": "nextEpoch",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_mapping(t_address,t_struct(Details)241_storage)": {
+            "label": "mapping(address => struct NodeList.Details)"
+          },
+          "t_struct(Details)241_storage": {
+            "label": "struct NodeList.Details",
+            "members": [
+              {
+                "label": "declaredIp",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "position",
+                "type": "t_uint256"
+              },
+              {
+                "label": "pubKx",
+                "type": "t_uint256"
+              },
+              {
+                "label": "pubKy",
+                "type": "t_uint256"
+              },
+              {
+                "label": "tmP2PListenAddress",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "p2pListenAddress",
+                "type": "t_string_storage"
+              }
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
+            "label": "mapping(uint256 => mapping(uint256 => uint256))"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "9a817c3339779e26223ae0adc3d34c92063913f95d08cbdb4c0bb0539dc17957": {
+      "address": "0x37C79CEC040D8bAE97447121f4d4F67adE237dD3",
+      "txHash": "0xc4f37f9a633608f7360d0afeba3286403a614a1b145a629646d0416abf025064",
       "layout": {
         "storage": [
           {

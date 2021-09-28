@@ -169,7 +169,7 @@ contract NodeList is OwnableUpgradeable {
     }
 
     function clearAllEpoch() public {
-        for (uint256 i=0 ; i<=currentEpoch;i++){
+        for (uint256 i = 0; i <= currentEpoch; i++) {
             delete epochInfo[i];
         }
     }

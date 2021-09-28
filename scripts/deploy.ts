@@ -29,16 +29,14 @@ async function main(): Promise<void> {
   const manifest = await ozUpgradesManifestClient.read();
   const bytecodeHash = hashBytecodeWithoutMetadata(NodeList.bytecode);
   const implementationContract = manifest.impls[bytecodeHash];
+  console.log("Logic contract",implementationContract?.address);
 
-  console.log("Implemetation address:", implementationContract?.address);
 
-  await Promise.all(
-    whiteList.map(async (acc: any) => {
-      const tx = await nodelistProxy.updateWhitelist(epoch, acc, true);
-      await tx.wait();
-      console.log(`${acc}: `, tx.hash);
-    }),
-  );
+  for (let i = 0; i < whiteList.length; i++) {
+    const tx = await nodelistProxy.updateWhitelist(epoch, whiteList[i], true);
+    await tx.wait();
+    console.log(`${whiteList[i]}: `, tx.hash);
+  }
 }
 
 main()
