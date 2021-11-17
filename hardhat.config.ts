@@ -88,6 +88,11 @@ const config: HardhatConfig = {
       url: "https://rpc-mumbai.maticvigil.com/v1/839c4f1f04664475d4214b7eb9c0b487746fa5eb",
       gasPrice: 50000000000,
     },
+    ethermint: {
+      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      url: "https://blockchain-testnet.arcana.network",
+      chainId: 9000,
+    },
     arcana: {
       accounts: [
         "0x88baea1c45c1434e494604f48a39eedb780ba71086d109b78cc3b7d41aa49773",
@@ -98,8 +103,8 @@ const config: HardhatConfig = {
         "0xf30105f5658983d74d018d56f00d288671c9835ae62700d0e6c220f8c3ab0fb5",
         "0x8c4513e9f0dee96823b4f720f89df2b2c42b925d992bea266c4aae2b3d53e954",
       ],
-      chainId: 100,
-      url: "http://35.154.54.71:10002/",
+      chainId: 1337,
+      url: "https://hardhat.arcana.network/",
       gasPrice: 50000000000,
     },
   },

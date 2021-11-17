@@ -1,256 +1,50 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0xE41390d07BE5032F1EF9b27C316217987525f843",
-    "txHash": "0x9ca7f37af22821644d47a1527b58917fd9bdeb5d1b0728a0c988eda9144050d1",
+    "address": "0x48b1de5C950836ea06d4311a39162c56E1A22262",
+    "txHash": "0x3aecbeeca0735dba2ceeb158958b82ef2d0cef90a69190b0e0715d3dfa023bbb",
     "deployTransaction": {
-      "hash": "0x9ca7f37af22821644d47a1527b58917fd9bdeb5d1b0728a0c988eda9144050d1",
+      "hash": "0x3aecbeeca0735dba2ceeb158958b82ef2d0cef90a69190b0e0715d3dfa023bbb",
       "type": 0,
       "accessList": null,
       "blockHash": null,
       "blockNumber": null,
       "transactionIndex": null,
       "confirmations": 0,
-      "from": "0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E",
+      "from": "0xD4E63CcbB6cdD36aD6c50a4ffABa5B55484663Ce",
       "gasPrice": {
         "type": "BigNumber",
-        "hex": "0x012a05f200"
+        "hex": "0x14"
       },
       "gasLimit": {
         "type": "BigNumber",
-        "hex": "0x075da0"
+        "hex": "0x0762b4"
       },
-      "to": null,
+      "to": "0x0000000000000000000000000000000000000000",
       "value": {
         "type": "BigNumber",
         "hex": "0x00"
       },
-      "nonce": 2,
+      "nonce": 12,
       "data": "0x608060405234801561001057600080fd5b50600080546001600160a01b031916339081178255604051909182917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350610759806100616000396000f3fe60806040526004361061007b5760003560e01c80639623609d1161004e5780639623609d1461011157806399a88ec414610124578063f2fde38b14610144578063f3b7dead146101645761007b565b8063204e1c7a14610080578063715018a6146100bc5780637eff275e146100d35780638da5cb5b146100f3575b600080fd5b34801561008c57600080fd5b506100a061009b366004610515565b610184565b6040516001600160a01b03909116815260200160405180910390f35b3480156100c857600080fd5b506100d1610215565b005b3480156100df57600080fd5b506100d16100ee366004610554565b610292565b3480156100ff57600080fd5b506000546001600160a01b03166100a0565b6100d161011f36600461058c565b61031c565b34801561013057600080fd5b506100d161013f366004610554565b6103ad565b34801561015057600080fd5b506100d161015f366004610515565b610405565b34801561017057600080fd5b506100a061017f366004610515565b6104ef565b6000806000836001600160a01b03166040516101aa90635c60da1b60e01b815260040190565b600060405180830381855afa9150503d80600081146101e5576040519150601f19603f3d011682016040523d82523d6000602084013e6101ea565b606091505b5091509150816101f957600080fd5b8080602001905181019061020d9190610538565b949350505050565b6000546001600160a01b031633146102485760405162461bcd60e51b815260040161023f906106c0565b60405180910390fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031633146102bc5760405162461bcd60e51b815260040161023f906106c0565b6040516308f2839760e41b81526001600160a01b038281166004830152831690638f283970906024015b600060405180830381600087803b15801561030057600080fd5b505af1158015610314573d6000803e3d6000fd5b505050505050565b6000546001600160a01b031633146103465760405162461bcd60e51b815260040161023f906106c0565b60405163278f794360e11b81526001600160a01b03841690634f1ef286903490610376908690869060040161065d565b6000604051808303818588803b15801561038f57600080fd5b505af11580156103a3573d6000803e3d6000fd5b5050505050505050565b6000546001600160a01b031633146103d75760405162461bcd60e51b815260040161023f906106c0565b604051631b2ce7f360e11b81526001600160a01b038281166004830152831690633659cfe6906024016102e6565b6000546001600160a01b0316331461042f5760405162461bcd60e51b815260040161023f906106c0565b6001600160a01b0381166104945760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b606482015260840161023f565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000806000836001600160a01b03166040516101aa906303e1469160e61b815260040190565b600060208284031215610526578081fd5b81356105318161070b565b9392505050565b600060208284031215610549578081fd5b81516105318161070b565b60008060408385031215610566578081fd5b82356105718161070b565b915060208301356105818161070b565b809150509250929050565b6000806000606084860312156105a0578081fd5b83356105ab8161070b565b925060208401356105bb8161070b565b9150604084013567ffffffffffffffff808211156105d7578283fd5b818601915086601f8301126105ea578283fd5b8135818111156105fc576105fc6106f5565b604051601f8201601f19908116603f01168101908382118183101715610624576106246106f5565b8160405282815289602084870101111561063c578586fd5b82602086016020830137856020848301015280955050505050509250925092565b600060018060a01b038416825260206040818401528351806040850152825b818110156106985785810183015185820160600152820161067c565b818111156106a95783606083870101525b50601f01601f191692909201606001949350505050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052604160045260246000fd5b6001600160a01b038116811461072057600080fd5b5056fea2646970667358221220d849f96f3086b9f82cdcf665adb8c697ace05638da1c7c16ab2d26293717af6764736f6c63430008020033",
-      "r": "0x3e5678171b165f1f7f8f992c213f108da00c0924b23d66172cb82b414f69b5de",
-      "s": "0x3b413e76f835f1a9b5f0f67804ec06df6df187621b67384de0d4fb5e55077148",
-      "v": 160038,
-      "creates": "0xE41390d07BE5032F1EF9b27C316217987525f843",
-      "chainId": 80001
+      "r": "0x2d8bc1f532e92b21e2ac6e9d49eb4264b5bdc1fb881ffa9f522135f79d065a17",
+      "s": "0x6fbe144dc72e963d1c89d05f4a5ce67f5817649238d9cc7602b63c1164f86874",
+      "v": 18036,
+      "creates": null,
+      "chainId": 9000
     }
   },
   "proxies": [
     {
-      "address": "0x25C45feb80C592f961249a6F92605C3cb0d9F674",
-      "txHash": "0x1dbfd0d38c4f0ebbec181c3b787618d51162214e1fd7ea5847de1545eda33c7b",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xBe21E7DBb034797095aa59e7A78d0A370dfACBd9",
-      "txHash": "0x8c904d6772f5043a3e898b6a6909bf99b1847098d3b34525a8f3b46fe688a380",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x047f3c31eb467FA2662d57F8Fc35fB5098bAF7eb",
-      "txHash": "0xee8b7a416a12d4f127b90f4c7973b040ae63d464b1afdedd820029888b7c0662",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xBCE8aB0FcE99d1A0A6A9718BC001ce51aee0e804",
-      "txHash": "0xb9b32149d90f5cd4673cb142c9c4459a56fc9dd3edb6c82a0394f54d39cd6533",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xfF0a773d456F513Cf73687bb291A55BEb7D1a1f0",
-      "txHash": "0xde94e1bedb94c7fa4067d9d6d0bafc7b503de522efaf5d206b24a647290a291e",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x66a9f7Bd25474C3b3c07deA3D381B4793e966989",
-      "txHash": "0xe7561e1ab8a0b3f42d1c0e8be138e5ab53d2c32afd860a7643d581e79854b950",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x711861B1cE4E563EFF46f3F06D524D8C9882AD07",
-      "txHash": "0x3ee657c1f327d8f405cc801d570eb9624635ba1502aa19e019013ddfada85e9a",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x2839ab42ABCb36b59340b53cB797055362974619",
-      "txHash": "0x7812226f7fe16c6fcc91ca67127df96d9854286587d0c184f84a7bb0dd195e01",
+      "address": "0xb87D359E590eF6bF3a68C4DE028448A0cf475726",
+      "txHash": "0x9513067f5924ab50460f0a77e981c5e71f8f9c802ac6f4574cf06f6b22d36664",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "e28a65538fd3e215362866038721dfc3e3af3f22ae0de45b49e4e84394ecbe41": {
-      "address": "0x1980C1692a9B15f626A796febee7f6813e23D44D",
-      "txHash": "0x364a2b8086f432e975ff9127f0ea06c42c3b328b0ccf63360dca527c5335023b",
-      "layout": {
-        "storage": [
-          {
-            "contract": "Initializable",
-            "label": "_initialized",
-            "type": "t_bool",
-            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:23"
-          },
-          {
-            "contract": "Initializable",
-            "label": "_initializing",
-            "type": "t_bool",
-            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:28"
-          },
-          {
-            "contract": "ContextUpgradeable",
-            "label": "__gap",
-            "type": "t_array(t_uint256)50_storage",
-            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
-          },
-          {
-            "contract": "OwnableUpgradeable",
-            "label": "_owner",
-            "type": "t_address",
-            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
-          },
-          {
-            "contract": "OwnableUpgradeable",
-            "label": "__gap",
-            "type": "t_array(t_uint256)49_storage",
-            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
-          },
-          {
-            "contract": "NodeList",
-            "label": "currentEpoch",
-            "type": "t_uint256",
-            "src": "contracts/NodeList.sol:7"
-          },
-          {
-            "contract": "NodeList",
-            "label": "whitelist",
-            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
-            "src": "contracts/NodeList.sol:31"
-          },
-          {
-            "contract": "NodeList",
-            "label": "epochInfo",
-            "type": "t_mapping(t_uint256,t_struct(Epoch)257_storage)",
-            "src": "contracts/NodeList.sol:33"
-          },
-          {
-            "contract": "NodeList",
-            "label": "nodeDetails",
-            "type": "t_mapping(t_address,t_struct(Details)241_storage)",
-            "src": "contracts/NodeList.sol:35"
-          },
-          {
-            "contract": "NodeList",
-            "label": "pssStatus",
-            "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))",
-            "src": "contracts/NodeList.sol:37"
-          }
-        ],
-        "types": {
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
-            "label": "mapping(uint256 => mapping(address => bool))"
-          },
-          "t_mapping(t_address,t_bool)": {
-            "label": "mapping(address => bool)"
-          },
-          "t_address": {
-            "label": "address"
-          },
-          "t_bool": {
-            "label": "bool"
-          },
-          "t_mapping(t_uint256,t_struct(Epoch)257_storage)": {
-            "label": "mapping(uint256 => struct NodeList.Epoch)"
-          },
-          "t_struct(Epoch)257_storage": {
-            "label": "struct NodeList.Epoch",
-            "members": [
-              {
-                "label": "id",
-                "type": "t_uint256"
-              },
-              {
-                "label": "n",
-                "type": "t_uint256"
-              },
-              {
-                "label": "k",
-                "type": "t_uint256"
-              },
-              {
-                "label": "t",
-                "type": "t_uint256"
-              },
-              {
-                "label": "nodeList",
-                "type": "t_array(t_address)dyn_storage"
-              },
-              {
-                "label": "prevEpoch",
-                "type": "t_uint256"
-              },
-              {
-                "label": "nextEpoch",
-                "type": "t_uint256"
-              }
-            ]
-          },
-          "t_array(t_address)dyn_storage": {
-            "label": "address[]"
-          },
-          "t_mapping(t_address,t_struct(Details)241_storage)": {
-            "label": "mapping(address => struct NodeList.Details)"
-          },
-          "t_struct(Details)241_storage": {
-            "label": "struct NodeList.Details",
-            "members": [
-              {
-                "label": "declaredIp",
-                "type": "t_string_storage"
-              },
-              {
-                "label": "position",
-                "type": "t_uint256"
-              },
-              {
-                "label": "pubKx",
-                "type": "t_uint256"
-              },
-              {
-                "label": "pubKy",
-                "type": "t_uint256"
-              },
-              {
-                "label": "tmP2PListenAddress",
-                "type": "t_string_storage"
-              },
-              {
-                "label": "p2pListenAddress",
-                "type": "t_string_storage"
-              }
-            ]
-          },
-          "t_string_storage": {
-            "label": "string"
-          },
-          "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
-            "label": "mapping(uint256 => mapping(uint256 => uint256))"
-          },
-          "t_mapping(t_uint256,t_uint256)": {
-            "label": "mapping(uint256 => uint256)"
-          },
-          "t_array(t_uint256)49_storage": {
-            "label": "uint256[49]"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]"
-          }
-        }
-      }
-    },
     "9a817c3339779e26223ae0adc3d34c92063913f95d08cbdb4c0bb0539dc17957": {
-      "address": "0x37C79CEC040D8bAE97447121f4d4F67adE237dD3",
-      "txHash": "0xc4f37f9a633608f7360d0afeba3286403a614a1b145a629646d0416abf025064",
+      "address": "0xEe9262bb876e12f66EB577bA5861B236633c43Ca",
+      "txHash": "0xb6cbfa172a9d8efdd8d3d06e26cc2609514c1bfb8df99a11647e1515bffe3bc7",
       "layout": {
         "storage": [
           {
