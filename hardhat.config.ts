@@ -107,6 +107,13 @@ const config: HardhatConfig = {
       url: "https://hardhat.arcana.network/",
       gasPrice: 50000000000,
     },
+    arcanadev: {
+      accounts: [
+        process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : "",
+      ],
+      url: "https://blockchain-dev.arcana.network",
+      chainId: 40404,
+    },
   },
   paths: {
     artifacts: "./artifacts",

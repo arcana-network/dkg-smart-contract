@@ -7,7 +7,7 @@
       "hash": "0x67f8712a5612b06944369b311430c98d450e72d71d6c177544d0d2b7b4001335",
       "type": 0,
       "accessList": null,
-      "blockHash": "0x8671d2359be7ab26e46aeea093f288a2262a2389e27031006655c06e237b0cb4",
+      "blockHash": "0x1667264221305cd4422fb32f917e6f03bc4678295acc8d290796d9b56d0f59d2",
       "blockNumber": 2,
       "transactionIndex": 0,
       "confirmations": 1,
@@ -35,46 +35,6 @@
     }
   },
   "proxies": [
-    {
-      "address": "0x047f3c31eb467FA2662d57F8Fc35fB5098bAF7eb",
-      "txHash": "0xf278c7415c2504dca86d8fa7ec59f0b96a328a2d642540a601116090ab0db4bc",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x37C79CEC040D8bAE97447121f4d4F67adE237dD3",
-      "txHash": "0xcfc0303612643e6dafb670b97cd6b7a00168d55013693e634bcda17211a8824f",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x33c302eC8547330A12Fd22608d5A0b3fD1bf571B",
-      "txHash": "0x1304801907f0a1bc6dfb4e59c948a1579d7702a9e0170ed7f6f4f7c7e3c8b420",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x25C45feb80C592f961249a6F92605C3cb0d9F674",
-      "txHash": "0x7f714650ecf1a7f1f0a7462267817db0f366b42170ba7b54d0c61678f10079c6",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xBe21E7DBb034797095aa59e7A78d0A370dfACBd9",
-      "txHash": "0x43c8672af8e8ff8b89e4365213b015dc239d0c486f82c907622b769679afc3bd",
-      "kind": "transparent"
-    },
-    {
-      "address": "0xBCE8aB0FcE99d1A0A6A9718BC001ce51aee0e804",
-      "txHash": "0x9c51572f5910699dd3f6e372e990babaf23714ab2e41c056177b4b781929a549",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x711861B1cE4E563EFF46f3F06D524D8C9882AD07",
-      "txHash": "0x8128c2a959d2a7a4592052066a7529183b39e9d9030b150f80c8dd0aea3e8178",
-      "kind": "transparent"
-    },
-    {
-      "address": "0x58Af401ddD92995cdF754D6796FEE70075954B9B",
-      "txHash": "0x4ef04404c7b2f8251c9d91b9c9c6f5df53cd618d3492ab449fb34f2994823a96",
-      "kind": "transparent"
-    },
     {
       "address": "0xE41390d07BE5032F1EF9b27C316217987525f843",
       "txHash": "0x1012f2dcd037707fa963842b07854be79b2b5b442dbfc819388f4903692fad7e",
