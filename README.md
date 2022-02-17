@@ -1,7 +1,7 @@
 # DKG Smart Contract
 
-Set of smart contract for DKG protocol.
-
++ Set of smart contract for DKG protocol.
++ Keeps track of DKG Nodes and its epochs
 ## Usage
 
 ### Pre Requisites
