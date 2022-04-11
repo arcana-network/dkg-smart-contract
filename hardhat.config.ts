@@ -108,11 +108,18 @@ const config: HardhatConfig = {
       gasPrice: 50000000000,
     },
     arcanadev: {
-      accounts: [
-        process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : "",
-      ],
+      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
       url: "https://blockchain-dev.arcana.network",
       chainId: 40404,
+    },
+    polygonDev: {
+      url: "http://127.0.0.1:10002/",
+      chainId: 100,
+      accounts: [
+        "0x88baea1c45c1434e494604f48a39eedb780ba71086d109b78cc3b7d41aa49773",
+        "0x1068e1d200d2bd3140445afec1ac7829f0012b87ff6c646f6b01023c95db13c8",
+        "0xa11c0370501f00f2ebe942b81a546e05b919a09bc9c45ea78a7181bbabcfa4f8",
+      ],
     },
   },
   paths: {
