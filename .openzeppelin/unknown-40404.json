@@ -14,7 +14,7 @@
       "from": "0x30dc12845f829C3Ee065c78B4Bb035F05Eeb38F5",
       "gasPrice": {
         "type": "BigNumber",
-        "hex": "0x00"
+        "hex": "0x10d8"
       },
       "gasLimit": {
         "type": "BigNumber",

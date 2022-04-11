@@ -4,7 +4,7 @@ import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-wit
 import { NodeList__factory } from "../typechain";
 
 describe("NodeList (Proxy)", () => {
-  let nodelistProxy: any, accounts: SignerWithAddress[], whitelist: string[];
+  let nodelistProxy: any, accounts: SignerWithAddress[], whitelist: number[], whiteListAddress: string[];
   let currentEpoch = ethers.BigNumber.from(1);
   let n = ethers.BigNumber.from(5);
 
@@ -25,15 +25,18 @@ describe("NodeList (Proxy)", () => {
     });
   });
 
-  describe("Configure whitelist", () => {
+  describe("Configure nodes", () => {
     it("Should updateEpoch", async () => {
       const epoch = ethers.BigNumber.from(1),
         k = ethers.BigNumber.from(3),
         t = ethers.BigNumber.from(1),
         prevEpoch = 0,
         nextEpoch = 2;
-      whitelist = [accounts[0].address, accounts[2].address];
-      let tx = await nodelistProxy.updateEpoch(epoch, n, k, t, whitelist, prevEpoch, nextEpoch);
+      whitelist = [0, 2, 3];
+      whiteListAddress = whitelist.map(d => {
+        return accounts[d].address;
+      });
+      let tx = await nodelistProxy.updateEpoch(epoch, n, k, t, [], prevEpoch, nextEpoch);
       await tx.wait();
       const epochData = await nodelistProxy.getEpochInfo(epoch);
 
@@ -41,20 +44,40 @@ describe("NodeList (Proxy)", () => {
       expect(epochData.n).to.equal(n);
       expect(epochData.k).to.equal(k);
       expect(epochData.t).to.equal(t);
-      for (let i = 0; i < whitelist.length; i++) {
-        expect(epochData.nodeList[i]).to.equal(whitelist[i]);
-      }
       expect(epochData.prevEpoch).to.equal(prevEpoch);
       expect(epochData.nextEpoch).to.equal(nextEpoch);
     });
 
     it("Should update whitelist", async () => {
       let epoch = 1;
-      whitelist.forEach(async acc => {
+      whiteListAddress.forEach(async acc => {
         const tx = await nodelistProxy.updateWhitelist(epoch, acc, true);
         await tx.wait();
         expect(await nodelistProxy.isWhitelisted(epoch, acc)).to.be.true;
       });
+    });
+
+    it("Should update nodeList", async () => {
+      let epoch = 1;
+      for (let i = 0; i < whitelist.length; i++) {
+        await nodelistProxy
+          .connect(accounts[whitelist[i]])
+          .listNode(epoch, `127.0.0.${i}`, (i + 1) * 256, (i + 1) * 512, `tmp2p${i}`, `p2p${i}`);
+      }
+    });
+  });
+
+  describe("Node details", async () => {
+    it("Fetch all node details", async () => {
+      let nodes = await nodelistProxy.getCurrentEpochDetails();
+      expect(nodes.length).equal(whitelist.length);
+      for (let i = 0; i < whitelist.length; i++) {
+        expect(nodes[i].declaredIp).equal(`127.0.0.${i}`);
+        expect(nodes[i].pubKx).equal((i + 1) * 256);
+        expect(nodes[i].pubKy).equal((i + 1) * 512);
+        expect(nodes[i].tmP2PListenAddress).equal(`tmp2p${i}`);
+        expect(nodes[i].p2pListenAddress).equal(`p2p${i}`);
+      }
     });
   });
 
