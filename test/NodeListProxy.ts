@@ -72,7 +72,7 @@ describe("NodeList (Proxy)", () => {
 
       await expect(nodelistProxy
           .connect(accounts[whitelist[0]])
-          .listNode(epoch, `127.0.0.${0}`, 256, 512, `tmp2p${0}`, `p2p${0}`)).to.be.revertedWith("Node is already registered");
+          .listNode(epoch, "127.0.0.0", 256, 512, "tmp2p0", "p2p0")).to.be.revertedWith("Node is already registered");
     })
   });
 
@@ -101,12 +101,12 @@ describe("NodeList (Proxy)", () => {
       await expect(nodelistProxy.updateEpoch(epoch, n, k, t, [accounts[0].address], prevEpoch, nextEpoch)).to.be.revertedWith("Node isn't whitelisted for epoch");
     });
 
-    it("Node not whitelisted can't be added to nodelist of the epoch", async() => {
+    it("Node that is not whitelisted can't be added to nodelist of the epoch", async() => {
       let epoch = 1;
 
       await expect(nodelistProxy
         .connect(accounts[4])
-        .listNode(epoch, `127.0.0.${1}`, (1 + 1) * 256, (1 + 1) * 512, `tmp2p${1}`, `p2p${1}`)).to.be.revertedWith("Node isn't whitelisted for epoch");
+        .listNode(epoch, "127.0.0.4", 5 * 256, 5 * 512, "tmp2p4", "p2p4")).to.be.revertedWith("Node isn't whitelisted for epoch");
     })
     
     it("Adding listNode to a invalid epoch", async () => {
@@ -117,7 +117,7 @@ describe("NodeList (Proxy)", () => {
 
       await expect(nodelistProxy
         .connect(accounts[4])
-        .listNode(epoch, `127.0.0.${1}`, (1 + 1) * 256, (1 + 1) * 512, `tmp2p${1}`, `p2p${1}`)).to.be.revertedWith("Epoch already created");
+        .listNode(epoch, "127.0.0.4", 5 * 256, 5 * 512, "tmp2p4", "p2p4")).to.be.revertedWith("Epoch already created");
     })
 
     it("Should not be able to update whitelist invalid Epoch",async () => {
