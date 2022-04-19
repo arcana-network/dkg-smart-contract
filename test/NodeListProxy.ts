@@ -146,7 +146,7 @@ describe("NodeList (Proxy)", () => {
       const newEpoch = ethers.BigNumber.from(2);
       const status = 1;
 
-      const tx = await await nodelistProxy.updatePssStatus(oldEpoch, newEpoch, status);
+      const tx = await nodelistProxy.updatePssStatus(oldEpoch, newEpoch, status);
       await tx.wait();
       expect(await nodelistProxy.getPssStatus(oldEpoch, newEpoch)).to.equal(status);
     })
