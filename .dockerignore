@@ -8,9 +8,9 @@ LICENSE.md
 README.md
 Makefile
 out*
-cache/
-.openzeppelin/
-typechain/
+cache
+.openzeppelin
+typechain
 .github
 .dockerignore
 .env.example
