@@ -121,6 +121,12 @@ const config: HardhatConfig = {
         "0xa11c0370501f00f2ebe942b81a546e05b919a09bc9c45ea78a7181bbabcfa4f8",
       ],
     },
+    localNetwork: {
+      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      url: process.env.LOCAL_NETWORK,
+      chainId: 100,
+      gasPrice: 50000000000,
+    },     
   },
   paths: {
     artifacts: "./artifacts",
