@@ -91,16 +91,6 @@ describe("NodeList (Proxy)", () => {
   });
 
   describe("Negative test cases in Configure nodes", () => {
-    it("UpdateEpoch with node address that is not whitelisted", async () => {
-      const epoch = ethers.BigNumber.from(1),
-        k = ethers.BigNumber.from(3),
-        t = ethers.BigNumber.from(1),
-        prevEpoch = 0,
-        nextEpoch = 2;
-
-      await expect(nodelistProxy.updateEpoch(epoch, n, k, t, [accounts[0].address], prevEpoch, nextEpoch)).to.be.revertedWith("Node isn't whitelisted for epoch");
-    });
-
     it("Node that is not whitelisted can't be added to nodelist of the epoch", async() => {
       let epoch = 1;
 
@@ -120,15 +110,6 @@ describe("NodeList (Proxy)", () => {
         .listNode(epoch, "127.0.0.4", 5 * 256, 5 * 512, "tmp2p4", "p2p4")).to.be.revertedWith("Epoch already created");
     })
 
-    it("Should not be able to update whitelist invalid Epoch",async () => {
-      const epoch = ethers.BigNumber.from(4),
-        k = ethers.BigNumber.from(3),
-        t = ethers.BigNumber.from(1),
-        prevEpoch = 0,
-        nextEpoch = 2;
-
-       await expect(nodelistProxy.updateWhitelist(epoch, accounts[0].address, true)).to.be.revertedWith("Invalid Epoch"); 
-    })
   });
 
   describe("Set current epoch", () => {
