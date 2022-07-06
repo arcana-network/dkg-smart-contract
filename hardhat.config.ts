@@ -112,6 +112,11 @@ const config: HardhatConfig = {
       url: "https://blockchain-dev.arcana.network",
       chainId: 40404,
     },
+    arcanabeta: {
+      accounts: [process.env.BETA_CONTRACT_OWNER ? process.env.BETA_CONTRACT_OWNER : ""],
+      url: "https://blockchain001-testnet.arcana.network/",
+      chainId: 40405,
+    },
     polygonDev: {
       url: "http://127.0.0.1:10002/",
       chainId: 100,
