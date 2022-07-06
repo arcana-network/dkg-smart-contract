@@ -5,15 +5,7 @@ import { hashBytecodeWithoutMetadata, Manifest } from "@openzeppelin/upgrades-co
 
 async function main(): Promise<void> {
   const signers: SignerWithAddress[] = await ethers.getSigners();
-  const whiteList: string[] = [
-    "0xb657BF59714d693D4890BCe2d1f5a0Ae2b750899",
-    "0xFEC50208aBbaB0D02ad11D4a25F156d0E4E0e97d",
-    "0x3007b9B9AD17bB4F21326eBe53D68ca112a9A5ea",
-    "0x341d193146f6d5B6c9Ce90BB5316C8d69AeE3eC1",
-    "0x5884F02a31C0cF5895a46A50d4123c92be4822B1",
-    "0x0daB49804022DeC1D2a35a89C51bc7B0148c8C2E",
-    "0x2B6E0Fabc2Cb3dEa7dfA96C2a63483AC33C05982"
-  ];
+  const whiteList: string[] = JSON.parse(process.env.WHITE_LIST as string)
   console.log("Deployer:", signers[0].address);
   console.log("Balance:", ethers.utils.formatEther(await signers[0].getBalance()));
   console.log("Total signers", signers.length);
