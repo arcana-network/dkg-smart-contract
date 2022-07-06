@@ -173,4 +173,13 @@ contract NodeList is OwnableUpgradeable {
             delete epochInfo[i];
         }
     }
+
+    function getCurrentEpochDetails() external view returns (Details[] memory nodes) {
+        address[] memory nodesAddress = epochInfo[currentEpoch].nodeList;
+        Details[] memory tempNodes = new Details[](nodesAddress.length);
+        for (uint256 i = 0; i < nodesAddress.length; i++) {
+            tempNodes[i] = nodeDetails[nodesAddress[i]];
+        }
+        return tempNodes;
+    }
 }
