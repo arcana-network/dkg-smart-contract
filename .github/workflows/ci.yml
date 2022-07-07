@@ -1,0 +1,49 @@
+name: CI
+
+on: 
+  pull_request:
+    branches:
+      - dev
+      - main
+      - 'feature/*'
+  push:
+    branches:
+      - dev
+      - main
+      - 'feature/*'
+
+env:
+  INFURA_API_KEY: https://rinkeby.infura.io/v3/ed492819e32f461d895affed5d7075d4
+  MNEMONIC: "early bulk slice lock bread glory quote camera just actual liar symbol"
+  CONTRACT_OWNER: 810bfaf89cfda4e0db30c06d3d3ab0d3e4e506b5f3879dfda00de31abe317a52
+  LOCAL_NETWORK: http://validator-node:8545
+  WHITE_LIST: '["0x56a5919815eaCb3AC1C8fAb415436B3C3FB0eBD9"]'
+
+jobs:
+  ci-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.0
+    - name: Install dependencies
+      run: yarn install        
+    - name: Run linters
+      run: yarn lint:ts
+    - name: Build
+      run: yarn compile
+    - name: Test
+      run: yarn test
+    - name: Coverage report
+      run: yarn coverage     
+    - name: Upload test coverage
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage/cobertura-coverage.xml
+        fail_ci_if_error: true
+        verbose: true
+        
