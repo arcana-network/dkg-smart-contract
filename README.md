@@ -90,3 +90,28 @@ compiler version is to add the following fields to your VSCode user settings:
 ```
 
 Where of course `v0.8.3+commit.8d00100c` can be replaced with any other version.
+
+## Deploy DKG Smart Contracts on Polygon Edge network(Local machine)
+
+### Prerequisites
+- [Docker](https://docs.docker.com/engine/install/)
+
+Note: Make sure to setup validator node(Polygon Edge) on local machine before deploying DKG Smart Contracts. Repository link for validator node setup: https://github.com/arcana-network/validator-node-setup
+
+1. Clone the repository
+
+```
+git clone git@github.com:arcana-network/dkg-smart-contract.git
+```
+
+2. Create environment file
+
+```
+cp .env.example .env
+```
+
+3. Deploy DKG Smart Contract on Polygon Edge network(Local machine).
+
+```
+make deploy
+```
