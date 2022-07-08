@@ -31,8 +31,8 @@ jobs:
         node-version: 16.0
     - name: Install dependencies
       run: npm install        
-    # - name: Run linters
-    #   run: npm run lint:ts
+    - name: Run linters
+      run: npm run lint:ts
     - name: Build
       run: npm run compile
     - name: Test
