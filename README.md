@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/arcana-network/dkg-smart-contract/branch/dev/graph/badge.svg?token=6FO544SHYW)](https://codecov.io/gh/arcana-network/dkg-smart-contract)
 # DKG Smart Contract
 
 Set of smart contract for DKG protocol.
