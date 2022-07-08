@@ -30,7 +30,7 @@ jobs:
       with:
         node-version: 16.0
     - name: Install dependencies
-      run: npm install        
+      run: yarn install        
     - name: Run linters
       run: yarn lint:ts
     - name: Build
