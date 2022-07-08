@@ -89,7 +89,7 @@ const config: HardhatConfig = {
       gasPrice: 50000000000,
     },
     ethermint: {
-      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      accounts: process.env.CONTRACT_OWNER ? [process.env.CONTRACT_OWNER] : [],
       url: "https://blockchain-testnet.arcana.network",
       chainId: 9000,
     },
@@ -108,7 +108,7 @@ const config: HardhatConfig = {
       gasPrice: 50000000000,
     },
     arcanadev: {
-      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      accounts: process.env.CONTRACT_OWNER ? [process.env.CONTRACT_OWNER] : [],
       url: "https://blockchain-dev.arcana.network",
       chainId: 40404,
     },
