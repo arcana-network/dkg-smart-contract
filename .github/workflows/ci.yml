@@ -20,7 +20,19 @@ env:
   WHITE_LIST: '["0x56a5919815eaCb3AC1C8fAb415436B3C3FB0eBD9"]'
 
 jobs:
-  ci-job:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.0    
+    - name: Run linters
+      run: npm run lint:sol
+
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -30,9 +42,7 @@ jobs:
       with:
         node-version: 16.0
     - name: Install dependencies
-      run: npm install        
-    - name: Run linters
-      run: npm run lint:sol
+      run: npm install
     - name: Build
       run: npm run compile
     - name: Test
@@ -46,3 +56,25 @@ jobs:
         files: /coverage.json
         fail_ci_if_error: true
         verbose: true
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.0
+    - name: Install dependencies
+      run: npm install
+    - name: Build
+      run: npm run compile
+
+  branch-name:
+    runs-on: ubuntu-latest
+    name: Check branch name  
+    steps:
+      - uses: deepakputhraya/action-branch-name@master
+        with:
+          regex: '\w+\/(?:feature-|hotfix-)?AR-\d+-.+'
+          ignore: main,dev
