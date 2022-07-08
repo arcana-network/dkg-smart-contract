@@ -112,6 +112,11 @@ const config: HardhatConfig = {
       url: "https://blockchain-dev.arcana.network",
       chainId: 40404,
     },
+    arcanabeta: {
+      accounts: [process.env.BETA_CONTRACT_OWNER ? process.env.BETA_CONTRACT_OWNER : ""],
+      url: "https://blockchain001-testnet.arcana.network/",
+      chainId: 40405,
+    },
     polygonDev: {
       url: "http://127.0.0.1:10002/",
       chainId: 100,
@@ -121,6 +126,12 @@ const config: HardhatConfig = {
         "0xa11c0370501f00f2ebe942b81a546e05b919a09bc9c45ea78a7181bbabcfa4f8",
       ],
     },
+    localNetwork: {
+      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      url: process.env.LOCAL_NETWORK,
+      chainId: 100,
+      gasPrice: 50000000000,
+    },     
   },
   paths: {
     artifacts: "./artifacts",
