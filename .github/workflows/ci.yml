@@ -30,15 +30,15 @@ jobs:
       with:
         node-version: 16.0
     - name: Install dependencies
-      run: yarn install        
+      run: npm install        
     - name: Run linters
-      run: yarn lint:ts
+      run: npm run lint:ts
     - name: Build
-      run: yarn compile
+      run: npm run compile
     - name: Test
-      run: yarn test
+      run: npm test
     - name: Coverage report
-      run: yarn coverage     
+      run: npm run coverage     
     - name: Upload test coverage
       uses: codecov/codecov-action@v3
       with:
