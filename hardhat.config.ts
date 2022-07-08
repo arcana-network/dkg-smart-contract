@@ -113,7 +113,7 @@ const config: HardhatConfig = {
       chainId: 40404,
     },
     arcanabeta: {
-      accounts: [process.env.BETA_CONTRACT_OWNER ? process.env.BETA_CONTRACT_OWNER : ""],
+      accounts: process.env.BETA_CONTRACT_OWNER ? [process.env.BETA_CONTRACT_OWNER] : [],
       url: "https://blockchain001-testnet.arcana.network/",
       chainId: 40405,
     },
@@ -127,11 +127,11 @@ const config: HardhatConfig = {
       ],
     },
     localNetwork: {
-      accounts: [process.env.CONTRACT_OWNER ? process.env.CONTRACT_OWNER : ""],
+      accounts: process.env.CONTRACT_OWNER ? [process.env.CONTRACT_OWNER] : [],
       url: process.env.LOCAL_NETWORK,
       chainId: 100,
       gasPrice: 50000000000,
-    },     
+    },
   },
   paths: {
     artifacts: "./artifacts",
