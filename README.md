@@ -7,10 +7,7 @@
 
 # DKG Smart Contract
 
-+ Set of smart contracts for DKG protocol.
-+ Keeps track of DKG Nodes and its epochs.
-
-*TBD Some insights on who can use this repository and for what purpose? How these DKG smart contracts can be utilized or used or updated by contributors as this is a public repository.*
+This repository contains sources of DKG Smart Contract used by Arcana DKG protocol. It keeps track of DKG nodes and its epochs. We have made it public for transparency.
 
 ## ⚙️ Installation
 
@@ -140,12 +137,6 @@ make deploy
 ## 💡 Support
 
 For any queries, contact the [Arcana Support Team](mailto:support@arcana.network).
-
-## 🤝 Contributing Guide
-
-We welcome all contributions to this public repository from the community.
-
-Read our [contributing guide](https://github.com/arcana-network/license/blob/main/CONTRIBUTING.md) to learn more about the our development process, how to propose bug fixes and improvements, and the code of conduct that we expect the participants to adhere to.
 
 ## ℹ️ License
 
