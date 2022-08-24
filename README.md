@@ -7,7 +7,9 @@
 
 # DKG Smart Contract
 
-This repository contains sources of DKG Smart Contract used by Arcana DKG protocol. It keeps track of DKG nodes and its epochs. We have made it public for transparency.
+This repository contains sources of DKG Smart Contract used by Arcana DKG protocol. It keeps track of DKG nodes and its epochs.
+
+This repository is public for reference purpose and transparency.
 
 ## ⚙️ Installation
 
@@ -132,7 +134,7 @@ make deploy
 
 ## 📚 Usage
 
-*To be updated - are there any usage instructions for this repository?*
+Arcana Network provides DKG Smart Contract source as a public repository for reference and transparency.
 
 ## 💡 Support
 
