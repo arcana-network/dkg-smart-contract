@@ -1,11 +1,19 @@
-[![codecov](https://codecov.io/gh/arcana-network/dkg-smart-contract/branch/dev/graph/badge.svg?token=6FO544SHYW)](https://codecov.io/gh/arcana-network/dkg-smart-contract)
+<p>
+<a href="#start"><img height="30rem" src="https://raw.githubusercontent.com/arcana-network/branding/main/an_logo_light_temp.png"/></a>
+<a title="MIT License" href="https://github.com/arcana-network/license/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue"/></a>
+<a title="Beta release" href="https://github.com/arcana-network/dkg-smart-contract/releases"><img src="https://img.shields.io/github/v/release/arcana-network/dkg-smart-contract?style=flat-square&color=28A745"/></a>
+<a title="Twitter" href="https://twitter.com/ArcanaNetwork"><img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FArcanaNetwork"/></a>
+</p>
+
 # DKG Smart Contract
 
-Set of smart contract for DKG protocol.
+This repository contains sources of DKG Smart Contract used by Arcana DKG protocol. It keeps track of DKG nodes and its epochs.
 
-## Usage
+This repository is public for reference purpose and transparency.
 
-### Pre Requisites
+## ⚙️ Installation
+
+### Prerequisites
 
 Before running any command, make sure to install dependencies:
 
@@ -92,12 +100,19 @@ compiler version is to add the following fields to your VSCode user settings:
 
 Where of course `v0.8.3+commit.8d00100c` can be replaced with any other version.
 
-## Deploy DKG Smart Contracts on Polygon Edge network(Local machine)
+## Deployment
 
-### Prerequisites
-- [Docker](https://docs.docker.com/engine/install/)
+You can deploy DKG Smart Contracts on the following supported chains:
 
-Note: Make sure to setup validator node(Polygon Edge) on local machine before deploying DKG Smart Contracts. Repository link for validator node setup: https://github.com/arcana-network/validator-node-setup
+### Polygon Edge Network (Local machine)
+
+**Prerequisites:**
+
+- Install [Docker](https://docs.docker.com/engine/install/)
+
+- Make sure that you setup the validator node (Polygon Edge) on your local machine before deploying the DKG Smart Contracts. You can access the repository for validator node [here](https://github.com/arcana-network/validator-node-setup)
+
+**Steps:**
 
 1. Clone the repository
 
@@ -116,3 +131,17 @@ cp .env.example .env
 ```
 make deploy
 ```
+
+## 📚 Usage
+
+Arcana Network provides DKG Smart Contract source as a public repository for reference and transparency.
+
+## 💡 Support
+
+For any queries, contact the [Arcana Support Team](mailto:support@arcana.network).
+
+## ℹ️ License
+
+This public repository from Arcana Networks is distributed under the [MIT License](https://fossa.com/blog/open-source-licenses-101-mit-license/).
+
+For details see [Arcana License](https://github.com/arcana-network/license/blob/main/LICENSE.md).
